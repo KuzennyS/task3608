@@ -11,11 +11,8 @@ public class Controller {
         this.model = model;
     }
 
-    /* получили команду через промежуточное звено в View */
     public void onShowAllUsers(){
-        /* через model загрузили пользователй FakeModel (в реальности будет работа с DAO) */
         model.loadUsers();
-        /* вывод на экран (View) свежих данных */
         usersView.refresh(model.getModelData());
     }
 

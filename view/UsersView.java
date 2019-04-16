@@ -21,8 +21,7 @@ public class UsersView implements View {
     public void setController(Controller controller) {
         this.controller = controller;
     }
-    /* промежуточное звено передали команду дальше в Controller
-    */
+
     public void fireEventShowAllUsers(){
         controller.onShowAllUsers();
 }

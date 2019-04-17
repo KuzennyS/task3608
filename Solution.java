@@ -19,9 +19,12 @@ public class Solution {
 
         EditUserView editUserView = new EditUserView();
         controller.setEditUserView(editUserView);
+        editUserView.setController(controller);
 
         usersView.fireEventShowAllUsers();
         usersView.fireEventOpenUserEditForm(126L);
+        editUserView.fireEventUserDeleted(124L);
+        editUserView.fireEventUserChanged("Sidorov",126,2);
         usersView.fireEventShowDeletedUsers();
     }
 }
